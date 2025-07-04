@@ -1,13 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FBFBFB;
+  color: #0B1D51;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.lesson-card,
+.card-body {
+  border: none ;
+  background-color: #E8F9FF;
+  margin-bottom: 10px;
+}
+
+.lesson-content,
+.test-question {
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 10px;
+}
+
+.lesson-card {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.card-header {
+  background-color: #C4D9FF;
+  border: none;
+}
+
+.topic {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.topic:hover {
+  background-color: #C4D9FF;
+  cursor: pointer;
+}
+
+.title-wrapper {
+  margin-bottom: 24px;
+}
+
+.title-wrapper h1 {
+  font-weight: 100;
+  font-size: 44px;
+  color: #277DB0;
+  margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+
+.subtitle-wrapper h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #2B343D !important;
 }
