@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/gmat-practice/static/css/main.9fb71593.css",
-    "main.js": "/gmat-practice/static/js/main.a2d9f5ef.js",
+    "main.css": "/gmat-practice/static/css/main.09b35f31.css",
+    "main.js": "/gmat-practice/static/js/main.29c61364.js",
     "index.html": "/gmat-practice/index.html",
-    "main.9fb71593.css.map": "/gmat-practice/static/css/main.9fb71593.css.map",
-    "main.a2d9f5ef.js.map": "/gmat-practice/static/js/main.a2d9f5ef.js.map"
+    "main.09b35f31.css.map": "/gmat-practice/static/css/main.09b35f31.css.map",
+    "main.29c61364.js.map": "/gmat-practice/static/js/main.29c61364.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fb71593.css",
-    "static/js/main.a2d9f5ef.js"
+    "static/css/main.09b35f31.css",
+    "static/js/main.29c61364.js"
   ]
 }
