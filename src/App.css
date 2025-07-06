@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.App {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.card-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.lesson-card {
+    background-color: white;
+    cursor: pointer;
+}
+
+.lesson-card .topic {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-card .topic:hover {
+    background-color: #C4D9FF;
+    cursor: pointer;
+}
+
+.lesson-card .accordion-body {
+    padding: 0px;
+}
+
+.test-card-container .test-card {
+    cursor: pointer;
+}
+
+.test-card-container .test-card .card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed-check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #28a745;
+    font-size: 1.5rem;
+}
+
+.progress-bar-container {
+    height: 5px;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+}
+
+.title-wrapper h1 {
+    font-weight: 100;
+    font-size: 44px;
+    color: #277DB0;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+
+.subtitle-wrapper h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #2B343D !important;
+}
+
+.lesson-detail #lesson-content-wrapper {
+    padding-bottom: 50px !important;
+}

@@ -1,22 +1,23 @@
 {
-  "name": "gmat-theory",
+  "name": "gmat-practice",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://omanshu840.github.io/gmat-practice",
   "dependencies": {
+    "@parse/react-native": "^0.0.1-alpha.18",
+    "@supabase/supabase-js": "^2.50.3",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.7",
-    "puppeteer": "^24.11.1",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "parse": "^6.1.1",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
+    "react-bootstrap-icons": "^1.11.6",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
     "react-scripts": "5.0.1",
-    "readline-sync": "^1.4.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
