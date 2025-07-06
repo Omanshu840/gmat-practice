@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gmat-practice/static/css/main.cbe5133e.css",
+    "main.js": "/gmat-practice/static/js/main.a2d9f5ef.js",
+    "index.html": "/gmat-practice/index.html",
+    "main.cbe5133e.css.map": "/gmat-practice/static/css/main.cbe5133e.css.map",
+    "main.a2d9f5ef.js.map": "/gmat-practice/static/js/main.a2d9f5ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbe5133e.css",
+    "static/js/main.a2d9f5ef.js"
+  ]
+}
