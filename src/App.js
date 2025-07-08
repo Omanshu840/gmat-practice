@@ -8,6 +8,7 @@ import TestAttempt from './pages/TestAttempt';
 import TestSummary from './pages/TestSummary';
 import './App.css';
 import { BASE_URL } from './services/utils';
+import Bookmarks from './pages/Bookmarks';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path={`${BASE_URL}/tests/:section`} element={<TestList />} />
           <Route path={`${BASE_URL}/tests/:section/:chapterId/:difficulty/:testId`} element={<TestAttempt />} />
           <Route path={`${BASE_URL}/test-summary/:section/:chapterId/:difficulty/:testId`} element={<TestSummary />} />
+          <Route path={`${BASE_URL}/bookmarks`} element={<Bookmarks />} />
         </Routes>
       </Container>
     </div>

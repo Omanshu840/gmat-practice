@@ -85,3 +85,9 @@
 .lesson-detail #lesson-content-wrapper {
     padding-bottom: 50px !important;
 }
+
+.check-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}

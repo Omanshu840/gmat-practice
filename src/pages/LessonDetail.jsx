@@ -23,6 +23,7 @@ import {
     makeTableSortFunctional,
     makeTabsFunctional,
 } from "../services/utils";
+import BookmarkButton from "../components/BookMarkButton";
 
 const LessonDetail = () => {
     const { section, chapterId, topicId } = useParams();
@@ -108,7 +109,14 @@ const LessonDetail = () => {
     return (
         <div className="lesson-detail">
             <Breadcrumbs />
-
+            <div className="d-flex justify-content-end pb-3">
+                <BookmarkButton
+                    section={section}
+                    chapterId={chapterId}
+                    topicId={topicId}
+                    topicName={currentTopic.topicName}
+                />
+            </div>
             <div className="lesson-body">
                 <div id="lesson-content-wrapper">
                     <div className="main-content">

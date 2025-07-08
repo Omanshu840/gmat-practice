@@ -1,9 +1,8 @@
-import { Badge } from "react-bootstrap";
 import { CheckCircleFill } from "react-bootstrap-icons";
 
 const CompletionBadge = ({ completed }) => {
     if (completed) {
-        return <CheckCircleFill color="green" size={18} />;
+        return <CheckCircleFill className="check-icon" color="green" size={18} />;
     }
     return <></>;
 };

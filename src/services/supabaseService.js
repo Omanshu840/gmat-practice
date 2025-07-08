@@ -114,3 +114,74 @@ export const getTestAttempts = async (section) => {
     return [];
   }
 };
+
+export const toggleBookmark = async (section, chapterId, topicId, topicName) => {
+  try {
+    // Check if bookmark exists
+    const { data: existing } = await supabase
+      .from('UserBookmarks')
+      .select()
+      .eq('section', section)
+      .eq('chapter_id', chapterId)
+      .eq('topic_id', topicId)
+      .eq('topic_name', topicName);
+
+    if (existing?.length > 0) {
+      // Remove bookmark
+      const { error } = await supabase
+        .from('UserBookmarks')
+        .delete()
+        .eq('section', section)
+        .eq('chapter_id', chapterId)
+        .eq('topic_id', topicId)
+        .eq('topic_name', topicName);
+      
+      return { bookmarked: false, error };
+    } else {
+      // Add bookmark
+      const { error } = await supabase
+        .from('UserBookmarks')
+        .insert({
+          section,
+          chapter_id: chapterId,
+          topic_id: topicId,
+          topic_name: topicName
+        });
+      
+      return { bookmarked: true, error };
+    }
+  } catch (error) {
+    console.error('Bookmark error:', error);
+    throw error;
+  }
+};
+
+export const getBookmarks = async () => {
+  try {
+    const { data } = await supabase
+      .from('UserBookmarks')
+      .select('section, chapter_id, topic_id, topic_name')
+    
+    return data || [];
+  } catch (error) {
+    console.error('Error fetching bookmarks:', error);
+    return [];
+  }
+};
+
+export const isTopicBookmarked = async (section, chapterId, topicId, topicName) => {
+  try {
+    const { data } = await supabase
+      .from('UserBookmarks')
+      .select()
+      .eq('section', section)
+      .eq('chapter_id', chapterId)
+      .eq('topic_id', topicId)
+      .eq('topic_name', topicName);
+    
+    return data?.length > 0;
+  } catch (error) {
+    console.error('Bookmark check error:', error);
+    return false;
+  }
+};
