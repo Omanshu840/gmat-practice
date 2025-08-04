@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Button, Card, ListGroup } from "react-bootstrap";
-import { loadLessons } from "../services/dataService";
+import { loadLessons, loadTopic } from "../services/dataService";
 // import {
 //     saveLessonProgress,
 //     getCompletedLessons,
@@ -30,6 +30,8 @@ const LessonDetail = () => {
     const [lesson, setLesson] = useState(null);
     const [completedTopics, setCompletedTopics] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [currentTopic, setCurrentTopic] = useState({});
+    const navigate = useNavigate();
 
     // add tabs to body to reflect ttp styles
     useEffect(() => {
@@ -75,12 +77,14 @@ const LessonDetail = () => {
 
     useEffect(() => {
         const loadData = async () => {
-            const [lessonsData, completedData] = await Promise.all([
+            const [lessonsData, completedData, currentTopic] = await Promise.all([
                 loadLessons(section),
                 getCompletedLessons(section),
+                loadTopic(section, chapterId, topicId)
             ]);
 
             setLesson(lessonsData[parseInt(chapterId)]);
+            setCurrentTopic(currentTopic);
             setCompletedTopics(completedData);
             setLoading(false);
         };
@@ -104,7 +108,7 @@ const LessonDetail = () => {
     if (loading) return <LoadingSpinner />;
     if (!lesson) return <div>Lesson not found</div>;
 
-    const currentTopic = lesson.topics[parseInt(topicId)];
+    // const currentTopic = lesson.topics[parseInt(topicId)];
 
     return (
         <div className="lesson-detail">
@@ -142,21 +146,16 @@ const LessonDetail = () => {
                 </Button>
                 <Button
                     variant="primary"
-                    onClick={() =>
+                    onClick={() => {
+                        navigate(`${BASE_URL}/lesson/${section}/${chapterId}/${parseInt(topicId) + 1}`)
                         window.scrollTo({
                             top: 0,
                             left: 0,
                             behavior: "instant",
                         })
-                    }
+                    }}
                 >
-                    <Link
-                        to={`${BASE_URL}/lesson/${section}/${chapterId}/${
-                            parseInt(topicId) + 1
-                        }`}
-                    >
-                        Next
-                    </Link>
+                    Next
                 </Button>
             </div>
 
